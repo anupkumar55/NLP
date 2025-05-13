@@ -3,7 +3,8 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const url = process.env.NEXT_PUBLIC_TRANSLATOR_API_URL + '/languages';
+  const url = process.env.NEXT_PUBLIC_TRANSLATOR_API_URL;
+  fetch(`${url}/languages`)
 
   try {
     const response = await fetch(url);
